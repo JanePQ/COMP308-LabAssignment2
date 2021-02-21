@@ -1,0 +1,10 @@
+﻿table.center {
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid black;
+  background-color: #b3cb35;
+}
+h2 {
+  width: 100%;
+  text-align: center;
+}

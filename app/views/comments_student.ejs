@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/footer.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/display.css" />
+  <link rel="stylesheet" type="text/css" href="css/scrollbar.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1><img src="img/2.11.jpg" alt="Logo">  Student Records</h1>
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="http://localhost:3000"> <i class="fa fa-home"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  </div>  
+</nav><br>
+<div class="panel-body">
+    <h2> Comments by </h2><br>
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="center">
+        <tr>
+            <td>
+                <div>
+
+                    <label>Course Code </label>
+                </div>
+
+            </td>
+
+            <td>
+                <div>
+                    <label>Course Name </label>
+                </div>
+
+            </td>
+            <td>
+                <div>
+                    <label>Comment </label>
+                </div>
+
+            </td>
+        </tr>
+
+
+        <% students.forEach(function(comment){ %>
+
+        <tr>
+            <td>
+                <div>
+                    <input type="text" name="coursecode" value="<%= comment.courseCode %>" />
+                </div>
+            </td>
+            <td>
+                <div>
+                    <input type="text" name="courseName" value="<%= comment.courseName %>" />
+                </div>
+            </td>
+
+            <td>
+                <div>
+                    <input type="text" name="comment" value="<%= comment.comment %>" />
+                </div>
+            </td>
+            
+
+        </tr>
+
+        <% })%>
+
+    </table>
+    <div class="footer">
+  <p>Created by Jane Quintos. © 2021</p>
+</div>
+</body>
+</html>
